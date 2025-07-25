@@ -19,6 +19,8 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 sh 'mvn clean test'  // Again, adjust for your tech stack
+                sh 'pwd'
+                sh 'ls -ltR'
             }
         }
 
