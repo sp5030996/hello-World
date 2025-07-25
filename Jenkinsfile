@@ -25,7 +25,7 @@ pipeline {
         stage('Archive Artifacts') {
             steps {
                 echo 'Archiving build artifacts...'
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: '${WORKSPACE}/target/*.jar', fingerprint: true
             }
         }
 
