@@ -1,3 +1,3 @@
-library 'my-shared-lib@main'
+@Library('my-shared-lib@main') _
 
 myCustomStep()
