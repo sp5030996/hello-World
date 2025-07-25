@@ -18,7 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'mvn clean test'  // Again, adjust for your tech stack
+                sh 'mvn test'  // Again, adjust for your tech stack
                 sh 'pwd'
                 sh 'ls -ltR'
             }
@@ -27,7 +27,7 @@ pipeline {
         stage('Archive Artifacts') {
             steps {
                 echo 'Archiving build artifacts...'
-                archiveArtifacts artifacts: '${WORKSPACE}/target/*.jar', fingerprint: true
+                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
             }
         }
 
