@@ -1,3 +1,3 @@
-@Library('my-shared-lib@main') _
+@Library('buildmaven@main') _
 
 myCustomStep()
